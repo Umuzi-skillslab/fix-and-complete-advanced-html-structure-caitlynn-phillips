@@ -1,33 +1,88 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional Media Production Services - Video, Audio, and Multimedia">
     <title>Media Production</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="top">
-        <h1>Media Production Company</h1>
-        <div class="nav">
+    <header class="top">
+        <div class="logo">LOGO</div>
+        <nav class="nav">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="media.html">Media</a>
             <a href="contact.html">Contact</a>
-        </div>
-    </div>
+        </nav>
+    </header>
     
-    <div class="hero">
-        <h2>Professional Media Production Services</h2>
-        <p>We create stunning visual content for your business needs.</p>
-    </div>
+    <main>
+        <!-- Hero Banner -->
+        <section class="hero wf-hero">
+            <h2>Hero Banner</h2>
+            <p>Large Intro Text</p>
+            <button class="cta-button">Call to Action Button</button>
+        </section>
+        
+        <!-- Our Services Section -->
+        <section class="wf-section">
+            <h2 class="section-title"><span>Our Services Section</span></h2>
+            <div class="services-grid">
+                <article class="service-card">
+                    <h3>Service 1</h3>
+                    <div class="info-box">Info Box</div>
+                    <button class="read-more">Read More</button>
+                </article>
+                <article class="service-card">
+                    <h3>Service 2</h3>
+                    <div class="info-box">Info Box</div>
+                    <button class="read-more">Read More</button>
+                </article>
+            </div>
+        </section>
+
+        <!-- Featured Media -->
+        <section class="wf-section">
+            <h2 class="section-title"><span>Featured Media</span></h2>
+            <p class="subtitle">Video / Audio / Gallery Grid</p>
+            <div class="media-boxes">
+                <div class="media-box"><h3>Video</h3></div>
+                <div class="media-box"><h3>Audio</h3></div>
+                <div class="media-box"><h3>Image</h3></div>
+            </div>
+            <button class="gallery-btn">Media Gallery Grid</button>
+        </section>
+
+        <!-- About Us Section -->
+        <section class="wf-section">
+            <h2 class="section-title"><span>About Us Section</span></h2>
+            <p class="about-text">Brief About Text</p>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="wf-section">
+            <div class="contact-area">
+                <div class="contact-form-side">
+                    <h3>Contact Form</h3>
+                    <input type="text" placeholder="">
+                    <input type="text" placeholder="">
+                    <input type="text" placeholder="">
+                    <textarea rows="4" placeholder=""></textarea>
+                </div>
+                <div class="contact-map-side">
+                    <div class="map-placeholder">
+                        <img src="images/hero-image.jpg" alt="Map" style="width:100%; height:100%; object-fit:cover; opacity: 0.5;">
+                    </div>
+                    <button class="map-btn">Embedded Map</button>
+                </div>
+            </div>
+        </section>
+    </main>
     
-    <div class="content">
-        <h2>What We Do</h2>
-        <p>Video production, audio recording, and multimedia solutions for businesses of all sizes.</p>
-    </div>
-    
-    <div class="bottom">
-        <p>Email: contact@mediaproduction.com</p>
-        <p>Phone: 555-0123</p>
-    </div>
+    <footer class="bottom">
+        <p>Quick Links | Social Icons | Copyright Info</p>
+    </footer>
 </body>
 </html>
