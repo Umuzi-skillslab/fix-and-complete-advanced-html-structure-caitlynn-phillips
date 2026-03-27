@@ -20,16 +20,16 @@
     
     <main>
         <section class="video-section">
-            <h2>Video Showcase</h2>
+            <h2 class="section-title"><span>Video Showcase</span></h2>
             <div class="video-grid">
-                <!-- First video - added controls and fallback -->
-                <video width="640" height="360" controls>
+                <!-- First video - removed inline width/height -->
+                <video controls style="width: 100%; height: auto; display: block;">
                     <source src="media/sample1.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
                 
                 <!-- Second video -->
-                <video width="640" height="360" controls>
+                <video controls style="width: 100%; height: auto; display: block;">
                     <source src="media/sample2.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -37,43 +37,41 @@
         </section>
         
         <section class="audio-section">
-            <h2>Audio Sample</h2>
-            <p>Listen to our audio production quality.</p>
-            <!-- Audio element added -->
-            <audio controls>
+            <h2 class="section-title"><span>Audio Sample</span></h2>
+            <p class="subtitle">Listen to our audio production quality.</p>
+            <audio controls style="width: 100%; max-width: 600px; margin: 0 auto; display: block;">
                 <source src="media/sample-audio.mp3" type="audio/mpeg">
                 Your browser does not support the audio element.
             </audio>
         </section>
         
         <section class="location-section">
-            <h2>Location</h2>
-            <p>Visit our studio at 123 Media Street</p>
-            <!-- iframe added -->
-            <iframe 
-                src="https://www.openstreetmap.org/export/embed.html?bbox=-0.13,51.5,-0.11,51.52&layer=mapnik" 
-                width="600" 
-                height="450" 
-                style="border: 1px solid black" 
-                title="Studio Location Form">
-            </iframe>
+            <h2 class="section-title"><span>Our Location</span></h2>
+            <p class="subtitle">Visit our studio at 123 Media Street</p>
+            <div class="video-grid">
+                <iframe 
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=-0.13,51.5,-0.11,51.52&layer=mapnik" 
+                    style="border: 1px solid var(--border-color); width: 100%; height: 300px;" 
+                    title="Studio Location Form">
+                </iframe>
+            </div>
         </section>
         
         <section class="testimonials">
-            <h2>Client Testimonials</h2>
+            <h2 class="section-title"><span>Client Testimonials</span></h2>
             <div class="testimonials-grid">
-                <figure>
-                    <img src="images/client1.jpg" alt="Sarah Johnson, Marketing Director">
+                <figure style="padding: 20px;">
+                    <img src="images/client1.jpg" alt="Sarah Johnson, Marketing Director" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 15px;">
                     <figcaption>
-                        <blockquote>"The team delivered exceptional video content that doubled our engagement. Truly professional."</blockquote>
-                        <cite>— Sarah Johnson, Marketing Director</cite>
+                        <blockquote style="font-style: italic; margin-bottom: 10px;">"The team delivered exceptional video content that doubled our engagement. Truly professional."</blockquote>
+                        <cite style="font-weight: bold; display: block;">— Sarah Johnson, Marketing Director</cite>
                     </figcaption>
                 </figure>
-                <figure>
-                    <img src="images/client2.jpg" alt="James Carter, Creative Lead">
+                <figure style="padding: 20px;">
+                    <img src="images/client2.jpg" alt="James Carter, Creative Lead" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 15px;">
                     <figcaption>
-                        <blockquote>"Outstanding audio production quality. Our podcast now sounds like it's from a major studio."</blockquote>
-                        <cite>— James Carter, Creative Lead</cite>
+                        <blockquote style="font-style: italic; margin-bottom: 10px;">"Outstanding audio production quality. Our podcast now sounds like it's from a major studio."</blockquote>
+                        <cite style="font-weight: bold; display: block;">— James Carter, Creative Lead</cite>
                     </figcaption>
                 </figure>
             </div>

@@ -160,14 +160,14 @@ main .wf-section:last-child {
     padding: 0 15px;
 }
 
-.services-grid {
+.services-grid, .services {
     display: flex; 
     gap: 30px;
     justify-content: center;
     flex-wrap: wrap; 
 }
 
-.services-grid > .service-card {
+.services-grid > .service-card, .services > .service-card {
     border: 1px solid var(--border-color);
     flex: 1 1 250px;
     display: flex;
@@ -175,12 +175,12 @@ main .wf-section:last-child {
     transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
-.services-grid > .service-card:hover {
+.services-grid > .service-card:hover, .services > .service-card:hover {
     transform: translateY(-5px); /* Transform 2 */
     box-shadow: 0 8px 15px rgba(0,0,0,0.05);
 }
 
-.services-grid > .service-card:nth-child(even) h3 {
+.services-grid > .service-card:nth-child(even) h3, .services > .service-card:nth-child(even) h3 {
     background-color: #fcfcfc;
 }
 
@@ -212,23 +212,26 @@ main .wf-section:last-child {
 /* =============================
    MEDIA GRID LAYOUT
 ============================= */
-.media-boxes {
+.media-boxes, .video-grid, .testimonials-grid, .portfolio-grid {
     display: grid; /* CSS Grid Requirement */
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     grid-template-rows: auto;
-    grid-gap: 15px;
-    margin-bottom: 15px;
+    grid-gap: 20px;
+    margin-bottom: 25px;
 }
 
-.media-box {
+.media-box, .video-grid video, .video-grid iframe, .portfolio-grid figure, .testimonials-grid figure {
     background-color: var(--light-gray);
     border: 1px solid var(--border-color);
-    height: 140px;
+    min-height: 200px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     color: var(--dark-text);
     transition: transform 0.3s ease;
+    width: 100%;
+    margin: 0;
 }
 
 .media-box:hover {

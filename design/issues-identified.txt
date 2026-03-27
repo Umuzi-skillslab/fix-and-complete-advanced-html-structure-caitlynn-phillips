@@ -1,6 +1,29 @@
 # Issues Identified in Starter Codebase
 
 ## HTML Structure & Semantics
+1. **Missing Document Metadata**: All HTML files lack `<meta charset="UTF-8">` and `<meta name="viewport" content="width=device-width, initial-scale=1.0">`. The `<meta name="description">` is also absent.
+2. **Lack of Semantic Tags**: The layout relies entirely on generic `<div>` elements instead of HTML5 semantic tags like `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<aside>`, and `<footer>`.
+3. **Improper Image Markup**: Images are currently using plain `<img>` tags. They need to be wrapped in `<figure>` and `<figcaption>` elements for proper semantics.
+
+## Media Elements
+1. **Incomplete Video Elements**: The existing video element in `media.html` lacks `controls` and fallback text. A second video element is entirely missing.
+2. **Missing Media Types**: An `<audio>` element with controls and an `<iframe>` (e.g., for Google Maps) are missing from the `media.html` page.
+
+## Form Deficiencies
+1. **Accessibility & Usability**: The contact form inputs lack `<label>` elements and a `<fieldset>` with `<legend>` for grouping.
+2. **Input Types & Validation**: Inputs use basic `type="text"`. They must be updated to HTML5 types (email, tel). Missing input types include select dropdowns, radio buttons, checkboxes, date, and number inputs. HTML5 validation attributes (required, pattern, minlength) are missing.
+
+## CSS Layout & Styling
+1. **Missing Advanced Layouts**: The CSS uses basic block/inline flow without Flexbox or CSS Grid. Flexbox is needed for navigation and section alignment, while CSS Grid is required for the media gallery.
+2. **Poor Selectors & Pseudo-classes**: The stylesheet relies strictly on basic element and class selectors. Advanced combination selectors, attribute selectors, and pseudo-classes (`:hover`, `:focus`, `:nth-child`) are absent.
+3. **Lack of Visual Effects**: There are no text effects, CSS transforms, transitions on interactive elements, or keyframe animations.
+4. **No Responsive Design**: Media queries are entirely missing, preventing the site from adapting to mobile devices.
+
+## Implementation Approach
+I will systematically replace generic `<div>` tags with semantic elements and add missing metadata. I'll implement Flexbox for the navigation and footer, and CSS Grid for the portfolio gallery. I will complete the form with all required accessible inputs and validation. Finally, I will enhance the styling with advanced selectors, pseudo-classes, transforms, transitions, and a custom `@keyframes` animation, ensuring cross-browser compatibility and responsive design throughout.
+# Issues Identified in Starter Codebase
+
+## HTML Structure & Semantics
 1. **Missing Document Metadata**: The `<meta charset="UTF-8">` is absent across multiple pages in the raw starter code.
 2. **Missing Viewport Meta Tag**: The `<meta name="viewport" content="width=device-width, initial-scale=1.0">` is generally missing.
 3. **Missing Meta Description**: The `<meta name="description">` tag is missing across pages.
