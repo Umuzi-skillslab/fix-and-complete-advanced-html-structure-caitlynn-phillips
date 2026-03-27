@@ -1,40 +1,108 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact our media production company">
     <title>Contact</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="top">
+    <header class="top">
         <h1>Contact Us</h1>
-        <div class="nav">
+        <nav class="nav">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="media.html">Media</a>
             <a href="contact.html">Contact</a>
-        </div>
-    </div>
+        </nav>
+    </header>
     
-    <div>
-        <h2>Get In Touch</h2>
-        
-        <!-- Form with multiple errors -->
-        <form>
-            <input type="text" placeholder="Name">
-            <input type="text" placeholder="Email">
-            <input type="text" placeholder="Phone">
-            <textarea placeholder="Message"></textarea>
+    <main>
+        <section class="contact-form-section">
+            <h2>Get In Touch</h2>
             
-            <!-- Missing: labels, proper input types (email, tel), validation attributes -->
-            <!-- Missing: radio buttons, checkboxes, select/dropdown, date/number inputs -->
-            <!-- Missing: fieldset for grouping -->
-            
-            <button>Submit</button>
-        </form>
-    </div>
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required minlength="2" maxlength="50" placeholder="Your Name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required placeholder="you@example.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone:</label>
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{4}" placeholder="555-0123">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="website">Portfolio/Website (optional):</label>
+                        <input type="url" id="website" name="website" placeholder="https://">
+                    </div>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Project Details</legend>
+                    
+                    <div class="form-group">
+                        <label for="service">Interested Service:</label>
+                        <select id="service" name="service" required>
+                            <option value="">--Select a Service--</option>
+                            <option value="video">Video Production</option>
+                            <option value="audio">Audio Recording</option>
+                            <option value="photo">Photography</option>
+                        </select>
+                    </div>
+                    
+                    <fieldset class="form-group" style="border: none; padding: 0; margin-bottom: 15px;">
+                        <legend style="font-weight: bold; margin-bottom: 5px;">Budget Range:</legend>
+                        <div class="radio-options" style="display: flex; gap: 15px;">
+                            <input type="radio" id="budget1" name="budget" value="low" required>
+                            <label for="budget1">Under $1,000</label>
+                            
+                            <input type="radio" id="budget2" name="budget" value="med">
+                            <label for="budget2">$1,000 - $5,000</label>
+                            
+                            <input type="radio" id="budget3" name="budget" value="high">
+                            <label for="budget3">Over $5,000</label>
+                        </div>
+                    </fieldset>
+                    
+                    <div class="form-group">
+                        <label for="guests">Number of Guests (if event):</label>
+                        <input type="number" id="guests" name="guests" min="1" max="500">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="eventDate">Event Date:</label>
+                        <input type="date" id="eventDate" name="eventDate">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" required minlength="10" placeholder="Tell us about your project..."></textarea>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+                        <label for="newsletter">Subscribe to our newsletter</label>
+                    </div>
+                </fieldset>
+                
+                <button type="submit">Submit Request</button>
+            </form>
+        </section>
+    </main>
     
-    <div class="bottom">
+    <footer class="bottom">
         <p>Email: contact@mediaproduction.com</p>
-    </div>
+    </footer>
 </body>
 </html>
+

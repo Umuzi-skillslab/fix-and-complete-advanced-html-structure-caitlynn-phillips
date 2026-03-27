@@ -1,0 +1,41 @@
+# Issues Identified in Starter Codebase
+
+## HTML Structure & Semantics
+1. **Missing Document Metadata**: The `<meta charset="UTF-8">` is absent across multiple pages in the raw starter code.
+2. **Missing Viewport Meta Tag**: The `<meta name="viewport" content="width=device-width, initial-scale=1.0">` is generally missing.
+3. **Missing Meta Description**: The `<meta name="description">` tag is missing across pages.
+4. **Lack of Semantic Tags (Header)**: The layout relies on a generic `<div class="top">` instead of `<header>`.
+5. **Lack of Semantic Tags (Nav)**: The navigation uses a `<div class="nav">` instead of semantic `<nav>`.
+6. **Lack of Semantic Tags (Main)**: The core content area uses a generic `<div>` wrapper instead of `<main>`.
+7. **Lack of Semantic Tags (Footer)**: The footer uses a `<div class="bottom">` instead of `<footer>`.
+8. **Lack of Semantic Tags (Section)**: Generic `<div>` elements are used for page sections instead of `<section>`.
+9. **Lack of Semantic Tags (Article)**: Service items and standalone content pieces use `<div>` instead of `<article>`.
+10. **Improper Image Markup (index)**: Images (e.g., map placeholder) are placed in raw `<img>` tags rather than `<figure>` elements.
+11. **Missing Figcaption**: Images lack `<figcaption>` to provide necessary semantic context.
+12. **Missing Alt Text**: Several images do not have meaningful `alt` attributes, hurting accessibility.
+13. **Invalid Form Container in Index**: The mini contact section on `index.html` has `<input>` elements not contained within a proper `<form>` element.
+
+## Media Elements
+14. **Incomplete Video Element**: Existing video elements lack the `controls` property preventing user interaction.
+15. **Missing Fallback for Video**: Video elements lack fallback text for browsers that don't support the `<video>` tag.
+16. **Missing Second Video**: The assignment requires two video elements, but only one is partially present.
+17. **Missing Audio Element**: There is no `<audio>` element on the media page as required.
+18. **Missing Iframe**: Embedded content elements like an `<iframe>` for a map are completely missing.
+
+## Form Deficiencies
+19. **Missing Form Labels**: Form inputs lack proper `<label>` elements, creating a major accessibility failure.
+20. **Missing Fieldsets**: The form lacks `<fieldset>` and `<legend>` for grouping related data correctly.
+21. **Incorrect HTML5 Input Types**: All inputs use generic `type="text"` instead of modern HTML5 types like `email`, `tel`, `date`, `number`.
+22. **Missing Input Types**: Required types like `radio`, `checkbox`, and `select` dropdowns are not originally present.
+23. **Missing Form Validation**: HTML5 validation attributes (such as `required`, `pattern`, `minlength`, `max`) are missing.
+
+## CSS Layout & Styling
+24. **Missing Advanced Layouts (Flexbox)**: Basic block and inline flows are used, lacking Flexbox for the navigation and footer alignment.
+25. **Missing Advanced Layouts (Grid)**: The media gallery relies on archaic display methods rather than CSS Grid.
+26. **Poor Selectors**: The stylesheet relies strictly on basic element and class selectors without advanced descendant, child, or combinations.
+27. **Lack of Pseudo-classes**: Essential pseudo-classes like `:hover`, `:focus`, `:nth-child` are missing or incomplete.
+28. **Missing Visual Effects**: Missing text effects (like `text-shadow`), CSS transforms, transitions, and keyframe animations.
+29. **No Responsive Design (Media Queries)**: Media queries are missing, preventing correct reflows on smaller devices.
+
+## Implementation Approach
+I will systematically replace generic `<div>` tags with semantic elements and add missing metadata. I'll implement Flexbox for the navigation and footer, and CSS Grid for the portfolio gallery. I will complete the form by wrapping inputs properly, replacing types with HTML5 equivalents, adding validation, `<label>`, and `<fieldset>`. Finally, I will enhance the styling with advanced combinator selectors, pseudo-classes, transforms, transitions, and a custom `@keyframes` animation, ensuring cross-browser compatibility and responsive design visually and technically across all 4 pages.
