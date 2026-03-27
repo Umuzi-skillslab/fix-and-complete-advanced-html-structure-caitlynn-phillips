@@ -1,50 +1,87 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View our media gallery of videos and audio production">
     <title>Media Gallery</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="top">
+    <header class="top">
         <h1>Media Gallery</h1>
-        <div class="nav">
+        <nav class="nav">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="media.html">Media</a>
             <a href="contact.html">Contact</a>
-        </div>
-    </div>
+        </nav>
+    </header>
     
-    <div>
-        <h2>Video Showcase</h2>
+    <main>
+        <section class="video-section">
+            <h2>Video Showcase</h2>
+            <div class="video-grid">
+                <!-- First video - added controls and fallback -->
+                <video width="640" height="360" controls>
+                    <source src="media/sample1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                
+                <!-- Second video -->
+                <video width="640" height="360" controls>
+                    <source src="media/sample2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
         
-        <!-- First video - missing controls and fallback -->
-        <video src="media/sample1.mp4" width="640" height="360"></video>
+        <section class="audio-section">
+            <h2>Audio Sample</h2>
+            <p>Listen to our audio production quality.</p>
+            <!-- Audio element added -->
+            <audio controls>
+                <source src="media/sample-audio.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </section>
         
-        <!-- Second video missing entirely -->
-    </div>
+        <section class="location-section">
+            <h2>Location</h2>
+            <p>Visit our studio at 123 Media Street</p>
+            <!-- iframe added -->
+            <iframe 
+                src="https://www.openstreetmap.org/export/embed.html?bbox=-0.13,51.5,-0.11,51.52&layer=mapnik" 
+                width="600" 
+                height="450" 
+                style="border: 1px solid black" 
+                title="Studio Location Form">
+            </iframe>
+        </section>
+        
+        <section class="testimonials">
+            <h2>Client Testimonials</h2>
+            <div class="testimonials-grid">
+                <figure>
+                    <img src="images/client1.jpg" alt="Sarah Johnson, Marketing Director">
+                    <figcaption>
+                        <blockquote>"The team delivered exceptional video content that doubled our engagement. Truly professional."</blockquote>
+                        <cite>— Sarah Johnson, Marketing Director</cite>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="images/client2.jpg" alt="James Carter, Creative Lead">
+                    <figcaption>
+                        <blockquote>"Outstanding audio production quality. Our podcast now sounds like it's from a major studio."</blockquote>
+                        <cite>— James Carter, Creative Lead</cite>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
     
-    <div>
-        <h2>Audio Sample</h2>
-        <!-- Audio element missing completely -->
-        <p>Listen to our audio production quality.</p>
-    </div>
-    
-    <div>
-        <h2>Location</h2>
-        <!-- iframe missing completely -->
-        <p>Visit our studio at 123 Media Street</p>
-    </div>
-    
-    <div>
-        <h2>Client Testimonials</h2>
-        <img src="images/client1.jpg">
-        <img src="images/client2.jpg">
-        <!-- Missing figure/figcaption semantic markup -->
-    </div>
-    
-    <div class="bottom">
+    <footer class="bottom">
         <p>Email: contact@mediaproduction.com</p>
-    </div>
+    </footer>
 </body>
 </html>
