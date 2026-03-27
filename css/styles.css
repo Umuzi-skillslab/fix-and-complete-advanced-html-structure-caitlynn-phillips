@@ -1,3 +1,6 @@
+/* =============================
+   VARIABLES & GLOBALS
+============================= */
 :root {
     --bg-color: #f0f0f0;
     --container-bg: #fff;
@@ -71,18 +74,27 @@ body {
 
 .wf-hero {
     background-color: var(--light-gray);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/hero-image.jpg');
+    background-size: cover;
+    background-position: center;
     text-align: center;
-    padding: 70px 20px;
+    padding: 120px 20px;
     border: 1px solid var(--border-color);
     border-bottom: none;
 }
 
 .wf-hero h2 {
-    font-size: 30px;
-    color: var(--dark-text);
+    font-size: 42px;
+    color: #ffffff;
     margin-bottom: 12px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.1); 
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.8); 
+    -webkit-animation: fadeInSlide 1s ease-out forwards;
     animation: fadeInSlide 1s ease-out forwards; 
+}
+
+@-webkit-keyframes fadeInSlide {
+    0% { opacity: 0; -webkit-transform: translateY(-15px); }
+    100% { opacity: 1; -webkit-transform: translateY(0); }
 }
 
 @keyframes fadeInSlide {
@@ -91,9 +103,10 @@ body {
 }
 
 .wf-hero p {
-    font-size: 18px;
-    color: var(--mid-text);
+    font-size: 20px;
+    color: #e0e0e0;
     margin-bottom: 25px;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.8); 
 }
 
 .cta-button, .read-more, .gallery-btn, .map-btn {
@@ -112,6 +125,9 @@ body {
     transform: scale(1.05); 
 }
 
+/* =============================
+   MAIN CONTENT SECTIONS
+============================= */
 .wf-section {
     padding: 30px 40px;
     border: 1px solid var(--border-color);
@@ -156,7 +172,7 @@ main .wf-section:last-child {
     flex: 1 1 250px;
     display: flex;
     flex-direction: column;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition 2 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
 .services-grid > .service-card:hover {
@@ -193,9 +209,13 @@ main .wf-section:last-child {
     font-size: 14px;
 }
 
+/* =============================
+   MEDIA GRID LAYOUT
+============================= */
 .media-boxes {
     display: grid; /* CSS Grid Requirement */
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-rows: auto;
     grid-gap: 15px;
     margin-bottom: 15px;
 }
@@ -230,6 +250,9 @@ main .wf-section:last-child {
     font-size: 14px;
 }
 
+/* =============================
+   CONTACT FORM & FOOTER
+============================= */
 .contact-area {
     display: flex;
     flex-wrap: wrap;
@@ -294,4 +317,49 @@ main .wf-section:last-child {
     color: var(--dark-text);
     font-size: 13px;
     font-weight: bold;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* =============================
+   RESPONSIVE / MOBILE
+============================= */
+@media (max-width: 600px) {
+    .top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .wf-hero {
+        padding: 80px 15px;
+    }
+
+    .wf-hero h2 {
+        font-size: 28px;
+    }
+
+    .wf-section {
+        padding: 20px 15px;
+    }
+
+    .contact-area {
+        flex-direction: column;
+    }
 }

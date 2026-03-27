@@ -66,15 +66,22 @@
             <div class="contact-area">
                 <div class="contact-form-side">
                     <h3>Contact Form</h3>
-                    <input type="text" placeholder="">
-                    <input type="text" placeholder="">
-                    <input type="text" placeholder="">
-                    <textarea rows="4" placeholder=""></textarea>
+                    <form action="#" method="post">
+                        <label for="index-name" class="visually-hidden">Name</label>
+                        <input type="text" id="index-name" name="name" placeholder="Name" required>
+                        <label for="index-email" class="visually-hidden">Email</label>
+                        <input type="email" id="index-email" name="email" placeholder="Email" required>
+                        <label for="index-subject" class="visually-hidden">Subject</label>
+                        <input type="text" id="index-subject" name="subject" placeholder="Subject" required>
+                        <label for="index-msg" class="visually-hidden">Message</label>
+                        <textarea id="index-msg" name="message" rows="4" placeholder="Message" required></textarea>
+                    </form>
                 </div>
                 <div class="contact-map-side">
-                    <div class="map-placeholder">
-                        <img src="images/hero-image.jpg" alt="Map" style="width:100%; height:100%; object-fit:cover; opacity: 0.5;">
-                    </div>
+                    <figure class="map-placeholder" style="margin: 0; padding: 0;">
+                        <img src="images/hero-image.jpg" alt="Map representing the studio location" style="width:100%; height:100%; object-fit:cover; opacity: 0.5;">
+                        <figcaption class="visually-hidden">Our Studio Location</figcaption>
+                    </figure>
                     <button class="map-btn">Embedded Map</button>
                 </div>
             </div>
